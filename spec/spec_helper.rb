@@ -34,7 +34,7 @@ RSpec.configure do |config|
     config.default_formatter = 'doc'
   end
 
-  config.profile_examples = 10
+  #config.profile_examples = 10
   config.order = :random
 
   # Seed global randomization in this process using the `--seed` CLI option.

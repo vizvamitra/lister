@@ -17,7 +17,12 @@ gem 'devise_token_auth', github: 'lynndylanhurley/devise_token_auth'
 
 group :development, :test do
   gem 'byebug'
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', github: 'rspec/rspec-rails', branch: 'master'
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+    gem lib, :git => "git://github.com/rspec/#{lib}.git", :branch => 'master'
+  end
+  gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'faker'
 end
 
 group :development do
@@ -26,7 +31,7 @@ end
 
 group :test do
   gem 'database_cleaner', '~> 1.5.1'
-  gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'shoulda-matchers', '~> 3.0'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
