@@ -14,10 +14,11 @@ gem 'omniauth'
 gem 'russian', '~> 0.6.0'
 gem 'pry-rails', '~> 0.3.4'
 gem 'devise_token_auth', github: 'lynndylanhurley/devise_token_auth'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: 'master'
+gem 'cancancan', '~> 1.13'
 
 group :development, :test do
   gem 'byebug'
-  gem 'rspec-rails', github: 'rspec/rspec-rails', branch: 'master'
   %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
     gem lib, :git => "git://github.com/rspec/#{lib}.git", :branch => 'master'
   end
@@ -32,6 +33,7 @@ end
 group :test do
   gem 'database_cleaner', '~> 1.5.1'
   gem 'shoulda-matchers', '~> 3.0'
+  gem 'cucumber-rails', :require => false
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
