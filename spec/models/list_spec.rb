@@ -10,10 +10,10 @@ RSpec.describe List, :type => :model do
 
   describe 'associations' do
     it{ is_expected.to belong_to(:user) }
-    it{ is_expected.to have_many(:list_items) }
+    it{ is_expected.to have_many(:items) }
 
     it 'deletes all list items on destroy' do
-      list = create(:list, list_items: [create(:list_item)])
+      list = create(:list, items: [create(:list_item)])
       expect{list.destroy}.to change(ListItem, :count).by(-1)
     end
   end

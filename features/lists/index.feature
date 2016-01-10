@@ -18,8 +18,8 @@ Feature: GET /lists api endpoint
       """
       {
         "lists": [
-          {"id": 1, "name": "todos"},
-          {"id": 2, "name": "wishes"}
+          {"id": 1, "name": "todos", "items_count": 0},
+          {"id": 2, "name": "wishes", "items_count": 0}
         ]
       }
       """

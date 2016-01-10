@@ -6,6 +6,13 @@ Given(/^user '([^']+)' has lists:$/) do |user_name, table|
   end
 end
 
+Given(/^'([^']+)' list has folowing items:$/) do |list_name, table|
+  list = List.find_by(name: list_name)
+  table.hashes.each do |item_attributes|
+    create(:list_item, list: list, **item_attributes.symbolize_keys!)
+  end
+end
+
 Given(/^user '([^']+)'$/) do |user_name|
   create(:user, name: user_name).confirm
 end

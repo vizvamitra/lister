@@ -23,7 +23,9 @@ Feature: POST /lists api endpoint
       """
       {
         "id": 101,
-        "name": "todos"
+        "name": "todos",
+        "items_count": 0,
+        "items": []
       }
       """
 

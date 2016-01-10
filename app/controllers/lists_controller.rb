@@ -5,7 +5,7 @@ class ListsController < ApplicationController
 
   def index
     @lists = current_user.lists
-    render json: @lists, root: 'lists', adapter: :json
+    render json: @lists, root: 'lists', adapter: :json, each_serializer: ListsSerializer
   end
 
   def show
