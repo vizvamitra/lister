@@ -73,13 +73,7 @@ Feature: PATCH /lists/:id api endpoint
         }
       }
       """
-    Then response status should be 401
-    And response should be JSON:
-      """
-      {
-        "errors": ["You are not authorized to perform this action."]
-      }
-      """
+    Then response status should be 404
 
 
   Scenario: unauthorized client tries to update list

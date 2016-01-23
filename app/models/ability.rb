@@ -5,6 +5,7 @@ class Ability
 
     if user
       can :manage, List, user: user
+      can :manage, ListItem, list: {user: user}
     end
     # Define abilities for the passed in user here. For example:
     #
