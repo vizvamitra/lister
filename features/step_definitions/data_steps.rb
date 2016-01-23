@@ -13,6 +13,11 @@ Given(/^'([^']+)' list has folowing items:$/) do |list_name, table|
   end
 end
 
+Given(/^'([^']+)' list has (\d+) items?$/) do |list_name, number|
+  list = List.find_by(name: list_name)
+  create_list(:list_item, number, list: list)
+end
+
 Given(/^user '([^']+)'$/) do |user_name|
   create(:user, name: user_name).confirm
 end

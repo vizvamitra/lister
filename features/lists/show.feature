@@ -7,9 +7,7 @@ Feature: GET /lists/:id api endpoint
     Given user 'Mike' has lists:
       | id |   name |
       |  1 |  todos |
-    And 'todos' list has folowing items:
-      | id |     body |
-      |  1 | buy milk |
+    And 'todos' list has 1 item
     And user 'Joe' has lists:
       | id |     name |
       |  2 | wishlist |
@@ -25,13 +23,9 @@ Feature: GET /lists/:id api endpoint
       {
         "id": 1,
         "name": "todos",
-        "items_count": 1,
-        "items": [
-          {"id": 1, "body": "buy milk"}
-        ]
+        "items_count": 1
       }
       """
-
 
   Scenario: Mike's client tries to get inexistent list
 

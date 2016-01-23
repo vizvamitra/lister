@@ -28,8 +28,7 @@ Feature: PATCH /lists/:id api endpoint
       {
         "id": 1,
         "name": "wishes",
-        "items_count": 0,
-        "items": []
+        "items_count": 0
       }
       """
 
