@@ -49,7 +49,13 @@ Feature: GET /lists/:list_id/items/:id api endpoint
 
     Given the client is logged in as 'Mike'
     When the client requests GET /lists/2/items/2
-    Then response status should be 404
+    Then response status should be 401
+    And response should be JSON:
+      """
+      {
+        "errors": ["You are not authorized to perform this action."]
+      }
+      """
 
 
   Scenario: unauthorized client tries to get list item

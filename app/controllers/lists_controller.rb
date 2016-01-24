@@ -1,7 +1,6 @@
 class ListsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_list, only: [:show, :update, :destroy]
-  before_action :authorize_list, only: [:show, :update, :destroy]
+  before_action :set_list!, only: [:show, :update, :destroy]
 
   def index
     @lists = current_user.lists
@@ -41,11 +40,8 @@ class ListsController < ApplicationController
       params.require(:list).permit(:name)
     end
 
-    def set_list
-      @list ||= current_user.lists.find(params[:id])
-    end
-
-    def authorize_list
+    def set_list!
+      @list ||= List.find(params[:id])
       authorize! :manage, @list
     end
 end
