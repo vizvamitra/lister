@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  host: localhost
+  pool: 5
+  timeout: 5000
+  user: rails
+  password: password
+
+development:
+  <<: *default
+  database: lister_development
+
+test: &test
+  <<: *default
+  database: lister_test
+
+production:
+  <<: *default
+  database: lister_production
+
+cucumber:
+  <<: *test

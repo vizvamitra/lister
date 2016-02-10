@@ -16,6 +16,7 @@ gem 'pry-rails', '~> 0.3.4'
 gem 'devise_token_auth', github: 'lynndylanhurley/devise_token_auth', branch: 'master'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: 'master'
 gem 'cancancan', '~> 1.13'
+gem 'unicorn', '~> 5.0.1'
 
 group :development, :test do
   gem 'byebug'
@@ -28,6 +29,11 @@ end
 
 group :development do
   gem 'spring'
+  gem 'capistrano', '~> 3.4.0'
+  gem 'capistrano-rails', '~> 1.1.6'
+  gem 'capistrano-bundler', '~> 1.1.4'
+  gem 'capistrano-rvm', '~> 0.1.2'
+  gem 'capistrano3-unicorn', '~> 0.2.1'
 end
 
 group :test do
