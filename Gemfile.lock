@@ -1,9 +1,10 @@
 GIT
   remote: git://github.com/lynndylanhurley/devise_token_auth.git
-  revision: 03fb37183a9d6760a1f90b921d84239e981cd503
+  revision: 85713d3b0333b2c388b729e0f5058be0e3287b23
+  branch: master
   specs:
     devise_token_auth (0.1.37.beta4)
-      devise (~> 3.5.2)
+      devise (> 3.5.2, < 4.1)
       rails (< 6)
 
 GIT

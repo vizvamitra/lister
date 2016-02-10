@@ -7,7 +7,7 @@ class HomepageController < ActionController::Base
       <html>
         <head>
           <title>Development mode</title>
-          <script type="text/javascript" src="/jquery.min.js"></script>
+          <script type="text/javascript" src="js/jquery.min.js"></script>
         </head>
         <body>
           <h1>Lister api</h1>

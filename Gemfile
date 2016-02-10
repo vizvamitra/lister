@@ -13,7 +13,7 @@ gem 'devise', github: 'plataformatec/devise', branch: 'master'
 gem 'omniauth'
 gem 'russian', '~> 0.6.0'
 gem 'pry-rails', '~> 0.3.4'
-gem 'devise_token_auth', github: 'lynndylanhurley/devise_token_auth'
+gem 'devise_token_auth', github: 'lynndylanhurley/devise_token_auth', branch: 'master'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: 'master'
 gem 'cancancan', '~> 1.13'
 
