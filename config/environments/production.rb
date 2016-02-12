@@ -1,15 +1,8 @@
 Rails.application.configure do
+
+  ### SETUP MAILER ###
+  config.action_mailer.delivery_method = :aws_sdk
   config.action_mailer.default_url_options = { host: "lister.midia-dev.ru", port: 80 }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:     Rails.application.secrets.amazon['smtp']['host'],
-    port:        Rails.application.secrets.amazon['smtp']['port'],
-    user_name:   Rails.application.secrets.amazon['smtp']['user_name'],
-    password:    Rails.application.secrets.amazon['smtp']['password'],
-    default_options: {
-      from: Rails.application.secrets.amazon['smtp']['from']
-    }
-  }
 
   # Settings specified here will take precedence over those in config/application.rb.
 
