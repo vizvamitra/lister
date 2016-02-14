@@ -1,4 +1,9 @@
 Rails.application.configure do
+
+  ### SETUP MAILER ###
+  config.action_mailer.delivery_method = :aws_sdk
+  config.action_mailer.default_url_options = { host: "lister.midia-dev.ru", port: 80 }
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.

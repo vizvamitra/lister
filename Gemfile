@@ -17,6 +17,7 @@ gem 'devise_token_auth', github: 'lynndylanhurley/devise_token_auth', branch: 'm
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers', branch: 'master'
 gem 'cancancan', '~> 1.13'
 gem 'unicorn', '~> 5.0.1'
+gem 'aws-sdk-rails'
 
 group :development, :test do
   gem 'byebug'
