@@ -5,7 +5,11 @@ Rails.application.routes.draw do
 
   constraints format: :json do
     resources :lists, defaults: {format: :json} do
-      resources :items, controller: 'list_items', defaults: {format: :json}
+      resources :items, controller: 'list_items', defaults: {format: :json} do
+        member do
+          post 'completed', to: 'list_items#toggle_completed'
+        end
+      end
     end
   end
 

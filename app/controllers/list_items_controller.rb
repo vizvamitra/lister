@@ -1,7 +1,7 @@
 class ListItemsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_list!
-  before_action :set_item!, only: [:show, :update, :destroy]
+  before_action :set_item!, only: [:show, :update, :toggle_completed, :destroy]
 
   def index
     items = @list.items
@@ -28,6 +28,11 @@ class ListItemsController < ApplicationController
     else
       render json: {errors: [@item.errors.messages]}, status: :unprocessable_entity
     end
+  end
+
+  def toggle_completed
+    @item.toggle_completed
+    render json: @item
   end
 
   def destroy

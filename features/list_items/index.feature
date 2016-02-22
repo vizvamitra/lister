@@ -26,8 +26,8 @@ Feature: GET /lists/:list_id/items api endpoint
       """
       {
         "items": [
-          {"id": 1, "body": "buy milk"},
-          {"id": 2, "body": "buy eggs"}
+          {"id": 1, "body": "buy milk", "completed": false},
+          {"id": 2, "body": "buy eggs", "completed": false}
         ]
       }
       """

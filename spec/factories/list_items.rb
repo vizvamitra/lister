@@ -2,8 +2,8 @@ FactoryGirl.define do
   factory :list_item do
     list
     body Faker::Lorem.sentence
-    done false
+    completed false
 
-    trait(:done){done true}
+    trait(:completed){completed true}
   end
 end

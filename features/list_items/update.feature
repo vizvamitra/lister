@@ -33,7 +33,8 @@ Feature: PATCH /lists/:list_id/items/:id api endpoint
       """
       {
         "id": 1,
-        "body": "sell eggs"
+        "body": "sell eggs",
+        "completed": false
       }
       """
 

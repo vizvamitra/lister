@@ -28,7 +28,8 @@ Feature: POST /lists/:list_id/items api endpoint
       """
       {
         "id": 101,
-        "body": "buy milk"
+        "body": "buy milk",
+          "completed": false
       }
       """
 

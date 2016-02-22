@@ -27,7 +27,8 @@ Feature: GET /lists/:list_id/items/:id api endpoint
       """
       {
         "id": 1,
-        "body": "buy milk"
+        "body": "buy milk",
+        "completed": false
       }
       """
 
